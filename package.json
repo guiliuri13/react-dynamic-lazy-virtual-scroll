@@ -1,6 +1,6 @@
 {
     "name": "react-dynamic-lazy-virtual-scroll",
-    "version": "0.0.3",
+    "version": "0.0.4",
     "description": "React dynamic lazy virtual scroll library",
     "main": "dist/rvs.js",
     "module": "dist/rvs-es.js",
