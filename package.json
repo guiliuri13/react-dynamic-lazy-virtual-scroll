@@ -1,0 +1,37 @@
+{
+    "name": "react-dynamic-lazy-virtual-scroll",
+    "version": "0.0.1",
+    "description": "React dynamic lazy virtual scroll library",
+    "main": "dist/rvs.js",
+    "module": "dist/rvs-es.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "build": "rollup -c",
+        "watch": "rollup -c -w"
+    },
+    "devDependencies": {
+        "react": "18.2.0",
+        "react-dom": "18.2.0",
+        "typescript": "5.0.2"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/guiliuri13/react-dynamic-lazy-virtual-scroll.git"
+    },
+    "keywords": [
+        "react",
+        "virtual-scroll",
+        "scroll",
+        "lazy-loading"
+    ],
+    "author": "Guilherme Iuri",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/guiliuri13/react-dynamic-lazy-virtual-scroll/issues"
+    },
+    "homepage": "https://github.com/guiliuri13/react-dynamic-lazy-virtual-scroll#readme",
+    "dependencies": {
+        "@types/react": "^18.2.0",
+        "@types/react-dom": "^18.2.1"
+    }
+}
