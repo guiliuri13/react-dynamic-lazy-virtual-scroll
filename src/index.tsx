@@ -142,7 +142,7 @@ const VirtualScroll: FC<VirtualScrollProps> = ({
 	const bottomPadding = Math.max(0, (totalLength - end - 1) * avgRowHeight);
 
 	const renderedItems = useMemo(() => {
-		const items = [];
+		const items: any[] = [];
 
 		// for (let i = start; i <= end; i++) {
 		//   if (isInView(i, currentOffset, length, buffer)) {

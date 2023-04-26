@@ -1,3 +1,4 @@
+// TODO: add types
 export const isInView = (container, element) => {
     const containerTop = container.offsetTop;
     const elementRect = element.getBoundingClientRect();
