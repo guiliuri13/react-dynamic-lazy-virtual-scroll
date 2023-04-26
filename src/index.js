@@ -2,27 +2,12 @@ import React, {
 	useEffect,
 	useRef,
 	useState,
-	RefObject,
-	UIEvent,
-	ReactNode,
-	FC,
 	useMemo,
 	forwardRef,
 } from "react";
 import { isInView } from "./utils";
 
-export interface VirtualScrollProps {
-	totalLength: number;
-	length?: number;
-	buffer?: number;
-	minItemHeight?: number;
-	offset?: number;
-	forwardRef?: RefObject<HTMLDivElement> | null;
-	renderItem: (index: number) => ReactNode;
-	onScroll?: (event: UIEvent<HTMLDivElement>) => void;
-}
-
-const VirtualScroll: FC<VirtualScrollProps> = ({
+const VirtualScroll = ({
 	totalLength,
 	length = 30,
 	buffer = 10,
@@ -54,7 +39,7 @@ const VirtualScroll: FC<VirtualScrollProps> = ({
 	}, [totalLength, length, state.offset]);
 
 	useEffect(() => {
-		const handleScroll = (event: Event) => {
+		const handleScroll = (event) => {
 			if (listRef.current) {
 				const { scrollTop } = listRef.current;
 				const direction = Math.floor(scrollTop - lastScrollTop);
@@ -142,7 +127,7 @@ const VirtualScroll: FC<VirtualScrollProps> = ({
 	const bottomPadding = Math.max(0, (totalLength - end - 1) * avgRowHeight);
 
 	const renderedItems = useMemo(() => {
-		const items: any[] = [];
+		const items = [];
 
 		// for (let i = start; i <= end; i++) {
 		//   if (isInView(i, currentOffset, length, buffer)) {
@@ -174,7 +159,7 @@ const VirtualScroll: FC<VirtualScrollProps> = ({
 
 export default forwardRef(
 	(
-		props: VirtualScrollProps,
-		ref: any
+		props,
+		ref
 	) => <VirtualScroll key={props.totalLength} forwardRef={ref} {...props} />
 );
