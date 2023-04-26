@@ -22,7 +22,9 @@
         "react",
         "virtual-scroll",
         "scroll",
-        "lazy-loading"
+        "lazy-loading",
+        "typescript",
+        "components"
     ],
     "author": "Guilherme Iuri",
     "license": "MIT",
